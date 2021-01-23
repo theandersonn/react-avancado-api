@@ -13,7 +13,7 @@ module.exports = {
     async afterCreate(_, __) {
       netlifyWebhook && axios.post(netlifyWebhook);
     },
-    async beforeCreate(_, __, ___) {
+    async afterUpdate(_, __, ___) {
       netlifyWebhook && axios.post(netlifyWebhook);
     },
   },
